@@ -60,6 +60,12 @@ if __name__ == "__main__":
     print(f"    Должность: {rang}")
 
 yearC = datetime.datetime.now().year
+hour = datetime.datetime.now().hour
+minute = datetime.datetime.now().minute
+second = datetime.datetime.now().second
+day = datetime.datetime.now().day
+month = datetime.datetime.now().month
+time1 = datetime.datetime.now().time()
 
 checkwarn = 'Проверка...'
 if org == 'ЦГБ-П':
@@ -109,14 +115,12 @@ print(f"    Бригада: {brigade}, {brigamb}")
 if surname == 'Вавилов' and name == 'Александр' and org == 'ОКБ-М':
     pashalka = 'Ошибка! Вавилов не может быть в ОКБ-М!'
     checkwarn1 = pashalka
-    print('\nХватит играться!')
 else:
     checkwarn1 = checkwarn1
 
 if surname == 'МакКартни' and name == 'Александр' and org == 'ЦГБ-П' and rang == 'Главный врач':
     pashalka = 'С возвращением, моя любовь❤️!'
     checkwarn1 = pashalka
-    print('Я тебя люблю!')
 else:
     checkwarn1 = checkwarn1
 
@@ -740,6 +744,7 @@ def dfb1():
     kb.send('enter + f8')
 
 def dfb2():
+    sleep(0.5)
     kb.send('f8')
     kb.write('me включил дефибриллятор и выставил необходимую мощность')
     kb.send('enter + f8')
@@ -768,11 +773,180 @@ def dfb2():
     kb.write('n Ответьте РП отыгровкой do Да. или do Нет.')
     kb.send('enter + f8')
 
+def dfb3():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me начал подавать более высокий разряд')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Электроды заряжаются.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me проводит непрямой массаж сердца пострадавшему, надавливая на грудную клетку')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Сотрудник выполняет непрямой массаж сердца.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Электроды заряжены.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me подал разряд')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Разряд подан.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Пульс стал стабильным?')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('n Ответьте РП отыгровкой do Да. или do Нет.')
+    kb.send('enter + f8')
+
+def dfb4():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me снял электроды с пострадавшего и убрал их в дефибриллятор')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Электроды сняты.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'me убрал дефибриллятор в {brigamb}')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'do Дефибриллятор в {brigamb}.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'me сняв перчатки, кинул их на полку')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'do Перчатки в {brigamb}.')
+    kb.send('enter + f8')
+
+def dfbdeath():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Пациент мёртв.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me взглянул на наручные часы')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do В кармане лежит блокнот с ручкой.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me открыв карман, достал блокнот с ручкой')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Блокнот с ручкой в руке.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me сделал пометку времени и даты смерти в блокноте')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'do Время смерти: {hour}:{minute}:{second}.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write(f'do Дата смерти: {day}.{month}.{yearC}.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do В блокноте сделана пометка времени и даты смерти.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me убрав блокнот с ручкой в карман, закрыл его')
+    kb.send('enter + f8')
+
+def palpacia():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me начал слегка нажимать на место примерного перелома на конечностях')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Сотрудник делает пальпацию.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Какая часть тела сломана?')
+    kb.send('enter + f8')
 
 
+def shina1():
+    kb.send('f8')
+    kb.write("do В карете скорой помощи лежит насос и вакумные шины.")
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me взял шину с насосом')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.write('do Вакумная шина с насосом в руке.')
+    kb.send('enter + f8')
 
+def shina2():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me держа шину в руке, вставил в неё насос')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Насос вставлен в шину.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.write('me наложил шину на примерное место перелома')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.write('do Шина наложена на примерное место перелома.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me накачал шину насосом')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Шина накачана.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me вытащил насос из шины')
+    kb.send('enter + f8')
 
-
+def shina3():
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Насос в руке.')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('me убрал насос на полку в АСМП')
+    kb.send('enter + f8')
+    sleep(0.5)
+    kb.send('f8')
+    kb.write('do Насос лежит на полке в АСМП.')
+    kb.send('enter + f8')
 
 kb.add_hotkey('alt + 1', hello)
 kb.add_hotkey('alt + 2', datas)
@@ -797,6 +971,13 @@ kb.add_hotkey('alt + backspace', fracvoice1)
 kb.add_hotkey('alt + enter', fracvoice2)
 kb.add_hotkey('alt + num_/', dfb1)
 kb.add_hotkey('alt + num_*', dfb2)
+kb.add_hotkey('alt + num_-', dfb3)
+kb.add_hotkey('alt + num_plus', dfb4)
+kb.add_hotkey('alt + num_9', dfbdeath)
+kb.add_hotkey('shift + ctrl + 8', palpacia)
+kb.add_hotkey('shift + ctrl + delete', shina1)
+kb.add_hotkey('shift + ctrl + home', shina2)
+kb.add_hotkey('shift + ctrl + insert', shina3)
 kb.add_abbreviation('/голова', 'say Я выпишу Вам Нурофен. Стоимость 500 рублей. Согласны?')
 kb.add_abbreviation('/ушиб', 'say Я выпишу Вам Финалгон. Стоимость 500 рублей. Согласны?')
 kb.add_abbreviation('/тошнота', 'say Я выпишу Вам Лоразепам. Стоимость 500 рублей. Согласны?')
@@ -831,8 +1012,9 @@ class App(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("AutoHotKey для сотрудников Министерства Здравоохранения | ver. 0.1")
+        self.title("AutoHotKey для сотрудников Министерства Здравоохранения | ver. 0.2-a")
         self.geometry("800x750")
+        self.custom_font = ("Monocraft", 14)
 
         self.tabview = ctk.CTkTabview(self)
         self.tabview.pack(padx=20, pady=20, fill="both", expand=True)
@@ -841,11 +1023,14 @@ class App(ctk.CTk):
 
         for tab_name in tab_names:
             self.tabview.add(tab_name)
+            self.tabview.tab(tab_name)
+
+
         
         texts = {
             "Лечение": '\nЛЕЧЕНИЕ ПАЦИЕНТОВ\n\nAlt + 1 | Приветствие\nAlt + 2 | Спросить данные\nAlt + 3 | Заполнить бланк\nAlt + 4 | Задать вопросы\nAlt + 5 | Осмотр в больнице\nAlt + Ctrl + 5 | Осмотр в АСМП/АСРП\nAlt + 7 | Выписка эпикриза в больнице\nAlt + Ctrl + 7 | Выписка эпикриза в АСМП/АСРП\n\n\nОСНОВНЫЕ ТАБЛЕТКИ\n\n/голова, /ушиб\n/тошнота, /отравление, /обезбол\n/запор, /понос, /геморрой\n/суставы, /судороги, /витамины\n/аллергия, /простуда, /горло\n/насморк, /бессонница, /печень\n/половыеорганы, /сердце, /зубы\n/глаза, /ожог, /уши\n/почки, /давление, /мочевой\n\nP.S. Прописывать в консоли.\nНажимайте на пробел, а не на энтер.\n',
             "Мед. карта": '\nВ разработке...\n',
-            "ПМП/Вызов": "\nБАЗОВОЕ ПМП\n\nCtrl + 1 | Осмотр\nCtrl + 2 | Проверка пульса\nCtrl + 3 | Приведение в сознание\nCtrl + 4 | Массаж сердца\nCtrl + 5 | Обработка ранений\nCtrl + 6 | Бинт\n\n\n!!!НИЖЕ ПОКА-ЧТО НЕ РАБОТАЕТ!!!\nПМП ПРИ ПЕРЕЛОМЕ\n\nAlt + Ctrl +  7 | Пальпация\n/шина1 | Достать шину\n/шина2 | Наложить шину\n/шина3 | Убрать шину\n\n\nПМП ПРИ ОСТАНОВКЕ СЕРДЦА\n\nAlt + Numpad . | АМБУ\nAlt + Numpad / | Достать дефибриллятор\nAlt + Numpad * | Разряд 1\nAlt + Numpad - | Разряд 2\nAlt + Numpad + | Убрать дефибриллятор\n Alt+ Numpad Enter | Пациент мёртв\n",
+            "ПМП/Вызов": "\nБАЗОВОЕ ПМП\n\nCtrl + 1 | Осмотр\nCtrl + 2 | Проверка пульса\nCtrl + 3 | Приведение в сознание\nCtrl + 4 | Массаж сердца\nCtrl + 5 | Обработка ранений\nCtrl + 6 | Бинт\n\n\nПМП ПРИ ПЕРЕЛОМЕ\nShift + Ctrl +  8 | Пальпация\nShift + Ctrl + Delete | Достать шину\nShift + Ctrl + Home | Наложить шину\nShift + Ctrl + Insert | Убрать шину\n\n\nПМП ПРИ ОСТАНОВКЕ СЕРДЦА\n\nAlt + Numpad . | АМБУ\nAlt + Numpad / | Достать дефибриллятор\nAlt + Numpad * | Разряд 1\nAlt + Numpad - | Разряд 2\nAlt + Numpad + | Убрать дефибриллятор\n Alt+ Numpad Enter | Пациент мёртв\n",
             "Операции": "\nВ разработке...\n",
             "Доклады": "\nРАЦИЯ\n\nAlt + Backspace | Рация доклад\nAlt + Enter | Рация прослушка\n\n\nОБРАБОТКА ВЫЗОВА\n\nAlt + Ctrl + Shift + 1 | Принятие вызова\nAlt + Ctrl + Shift + 2 | Прибытие на место вызова\nAlt + Ctrl + Shift + 3 | Госпитализация в больницу\nAlt + Ctrl + Shift + = | Вызов обработан\nAlt + Ctrl + Shift + - | Вызов ложный\n",
             "Личные данные": f"\nФИО: {surname} {name} {patronyme}\nДолжность: {rang}\nГород трудоустройства: {city}\nНомер бригады : {brigade}\n\n{checkwarn1}\n",
@@ -856,11 +1041,11 @@ class App(ctk.CTk):
             label = ctk.CTkLabel(
                 master=self.tabview.tab(tab_name),
                 text=texts[tab_name],
-                font=("Rubik Medium", 14),
+                font=("Rubik", 14),
                 wraplength=500,
                 justify="center",
                 fg_color='#494d4e',
-                corner_radius=10
+                corner_radius=15
             )
             label.pack(padx=10, pady=10)
 
